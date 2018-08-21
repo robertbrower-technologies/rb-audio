@@ -75,6 +75,10 @@ Once RbAudioModule is imported, you can use its directives in your Angular appli
 
 Set the value of the audio directive to the ID of the audio element you added to index.html.
 
+## Demo
+
+https://stackblitz.com/edit/angular-gitter-yziwye
+
 ## License
 
 MIT © [Robert Brower](mailto:robertbrower.technologies@gmail.com)
