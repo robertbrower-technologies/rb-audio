@@ -1,9 +1,9 @@
 {
   "name": "rb-audio",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "repository": {
     "type": "git",
-    "url": "https://github.com/robertbrower-technologies/rb-meter"
+    "url": "https://github.com/robertbrower-technologies/rb-audio"
   },
   "author": {
     "name": "Robert Brower",
@@ -14,7 +14,7 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/robertbrower-technologies/rb-meter/issues"
+    "url": "https://github.com/robertbrower-technologies/rb-audio/issues"
   },
   "main": "rb-audio.umd.js",
   "module": "rb-audio.js",
