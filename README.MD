@@ -1,5 +1,7 @@
 # rb-audio
 
+clickAudio, mouseOverAudio, onDestroyAudio, onInitAudio and scrollAudio directives for Angular.
+
 ## Installation
 
 To install this library, run:
@@ -8,15 +10,9 @@ To install this library, run:
 $ npm install rb-audio --save
 ```
 
-## Consuming your library
+## Consuming RbAudioModule
 
-Once you have published your library to npm, you can import your library in any Angular application by running:
-
-```bash
-$ npm install rb-audio
-```
-
-and then from your Angular `AppModule`:
+From your Angular `AppModule`:
 
 ```typescript
 import { BrowserModule } from '@angular/platform-browser';
@@ -24,8 +20,8 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
-// Import your library
-import { SampleModule } from 'rb-audio';
+// Import RbAudioModule
+import { RbAudioModule } from 'rb-audio';
 
 @NgModule({
   declarations: [
@@ -34,8 +30,8 @@ import { SampleModule } from 'rb-audio';
   imports: [
     BrowserModule,
 
-    // Specify your library as an import
-    LibraryModule
+    // Specify RbAudioModule as an import
+    RbAudioModule
   ],
   providers: [],
   bootstrap: [AppComponent]
@@ -43,29 +39,41 @@ import { SampleModule } from 'rb-audio';
 export class AppModule { }
 ```
 
-Once your library is imported, you can use its components, directives and pipes in your Angular application:
+Once RbAudioModule is imported, you can use its directives in your Angular application:
 
 ```xml
-<!-- You can now use your library component in app.component.html -->
+<!-- Add <audio> elements to index.html -->
+<audio id="clickAudio">
+  <source src="assets/audio/click.mp3" type="audio/mpeg">
+    Your browser does not support audio.
+</audio>
+<audio id="mouseOverAudio">
+  <source src="assets/audio/mouse-over.mp3" type="audio/mpeg">
+  Your browser does not support audio.
+</audio>
+<audio id="onDestroyAudio">
+  <source src="assets/audio/on-destroy.mp3" type="audio/mpeg">
+  Your browser does not support audio.
+</audio>
+<audio id="onInitAudio">
+  <source src="assets/audio/on-init.mp3" type="audio/mpeg">
+  Your browser does not support audio.
+</audio>
+<audio id="scrollAudio">
+  <source src="assets/audio/scroll.mp3" type="audio/mpeg">
+    Your browser does not support audio.
+</audio>
+```
+
+```xml
+<!-- You can now use RbAudioModule directives in app.component.html -->
 <h1>
   {{title}}
 </h1>
-<sampleComponent></sampleComponent>
+<button mouseOverAudio="mouseOverAudio"></button>
 ```
 
-## Development
-
-To generate all `*.js`, `*.d.ts` and `*.metadata.json` files:
-
-```bash
-$ npm run build
-```
-
-To lint all `*.ts` files:
-
-```bash
-$ npm run lint
-```
+Set the value of the audio directive to the ID of the audio element you added to index.html.
 
 ## License
 

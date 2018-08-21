@@ -3,7 +3,7 @@ import { Directive, Input, OnInit } from '@angular/core';
 @Directive({
   selector: '[onInitAudio]'
 })
-export class OnInitAudioDirective {
+export class OnInitAudioDirective implements OnInit {
 
   @Input() onInitAudio: string; 
   

@@ -3,7 +3,7 @@ import { Directive, Input, HostListener, OnInit } from '@angular/core';
 @Directive({
   selector: '[clickAudio]'
 })
-export class ClickAudioDirective {
+export class ClickAudioDirective implements OnInit {
 
   @Input() clickAudio: string; 
   

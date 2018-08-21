@@ -1,9 +1,9 @@
-import { Directive, Input, OnInit } from '@angular/core';
+import { Directive, Input, OnInit, OnDestroy } from '@angular/core';
 
 @Directive({
   selector: '[onDestroyAudio]'
 })
-export class OnDestroyAudioDirective {
+export class OnDestroyAudioDirective implements OnInit, OnDestroy {
 
   @Input() onDestroyAudio: string; 
   
@@ -14,6 +14,9 @@ export class OnDestroyAudioDirective {
 
   ngOnInit() {
     this.audio = document.getElementById(this.onDestroyAudio);
+  }
+
+  ngOnDestroy() {
     this.audio.play();
   }
 
