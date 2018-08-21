@@ -1,0 +1,28 @@
+{
+  "name": "rb-audio",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/robertbrower-technologies/rb-meter"
+  },
+  "author": {
+    "name": "Robert Brower",
+    "email": "robertbrower.technologies@gmail.com"
+  },
+  "keywords": [
+    "angular"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/robertbrower-technologies/rb-meter/issues"
+  },
+  "main": "rb-audio.umd.js",
+  "module": "rb-audio.js",
+  "jsnext:main": "rb-audio.js",
+  "typings": "rb-audio.d.ts",
+  "peerDependencies": {
+    "@angular/core": "^4.0.0",
+    "rxjs": "^5.1.0",
+    "zone.js": "^0.8.4"
+  }
+}
